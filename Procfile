@@ -1,1 +1,1 @@
-boiling-cove-78682: python3 main.py
+web: python3 main.py
