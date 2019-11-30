@@ -17,8 +17,11 @@ def start_message(message):
 	global last
 	try:
 		a = int(message.text)
-		f = last['download'+str(a)]
-		bot.send_message(message.chat.id,f)
+		if last != None:
+			f = last['download'+str(a)]
+			bot.send_message(message.chat.id,f)
+		else:
+			bot.send_message(message.chat.id,'Напишите название книги .')
 	except Exception as e:
 		try:
 		
